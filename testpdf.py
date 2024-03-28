@@ -37,7 +37,6 @@ if not isExist:
 
 
 
-
     
 
 
@@ -341,11 +340,11 @@ def createpdf(region):
 
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    # fonts = [(f.name, f.fname) for f in fm.fontManager.ttflist if 'Nanum' in f.name]
-    # print(fonts)
+#     # fonts = [(f.name, f.fname) for f in fm.fontManager.ttflist if 'Nanum' in f.name]
+#     # print(fonts)
     
-    filename = 'Infra_in_detail_' + datetime.now().strftime('%Y%m%d-%H%M') + '.pdf'
+#     filename = 'Infra_in_detail_' + datetime.now().strftime('%Y%m%d-%H%M') + '.pdf'
 
-    gen_pdf(filename)
+#     gen_pdf(filename)
