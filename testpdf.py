@@ -173,18 +173,251 @@ def createpdf(region):
         },
         "EU": {
             "sentence_h1": [
-                'h1_first sentence',
-                'h1_second sentence',
+                '',
+                '',
+                '',
+                'BM(Bare Metal): CCS내 모든 물리서버 대상 Worst Top 10 정보. Red가 아니면 모두 정상',
+                'VM: CCS EU 내 모든 가상서버 대상 Worst Top 10  정보.',
+                'EU DB : EU PRD DB 정보 (CPU, Memory, session)',
+                '',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                '',
+                '',
+                '',
+                '',
+                '',
             ],
             "sentence_h2": [
-                'h2_first sentence',
-                'h2_second sentence',
+                '',
+                '',
+                '',
+                '(Red 기준 : CPU 10% 이하, 메모리 300M이하, free Disk 10% 이하)',
+                '(Red 기준 : CPU 10% 이하, 메모리 500M이하, free Disk 10% 이하) ',
+                '',
+                '',
+                '',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '',
+                '',
+                '',
+                '',
             ],
             "sentence_h3": [
-                'h3_first sentence',
-                'h4_second sentence',
+                'http://10.11.67.29:3000/d/BfKKMwcVz/eutms-a10-resource-monitor?orgId=1&refresh=5m',
+                'http://10.11.67.29:3000/d/HK5wzuFVk2/eutms-fw_resource-monitor?orgId=1&refresh=5m',
+                'http://10.11.67.29:3000/d/MtWXiuFVz/eu-prd-ccs-neteuweokeu-jonghab-moniteoring?orgId=1',
+                'http://10.11.67.29:3000/d/ZdXDq9F4k/eu-bm-and-netapp-resource?orgId=1',
+                'http://10.11.67.29:3000/d/_us9CrK4z/eu-vm-resource?orgId=1',
+                'http://10.11.67.29:3000/d/t4xORuFVz/eu-prd-db-resource-usage-top-20?orgId=1',
+                'http://10.11.67.29:3000/d/y0-T77cVk/eu_mongodb?orgId=1',
+                'http://10.11.67.29:3000/d/bhPMpo54k/eu-netapp-dash-board',
+                'https://10.7.0.231/clusters/69010/explorer',
+                'http://10.11.67.29:3000/d/k4uJRdc4z/coc-k8s-summary-dashboard-alert-system-eu-1?orgId=1',
+                'http://10.11.67.29:3000/d/BBEbgOc4k/coc-k8s-summary-dashboard-alert-system-eu-2?orgId=1',
+                'http://10.11.67.29:3000/d/6yD-Rdc4k/coc-k8s-summary-dashboard-alert-system-eu-3?orgId=1',
+                'http://10.11.67.29:3000/d/niGBgO5Vz/coc-k8s-summary-dashboard-alert-system-eu-4?orgId=1',
             ]
-        }
+        },
+        "RU": {
+            "sentence_h1": [
+                '',
+                '',
+                '',
+                'BM(Bare Metal): CCS내 모든 물리서버 대상 Worst Top 10 정보. Red가 아니면 모두 정상',
+                'VM: CCS내 모든 가상서버 대상 Worst Top 10  정보.',
+                'RU DB : RU PRD DB 정보 (CPU, Memory, session)',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                '',
+            ],
+            "sentence_h2": [
+                '',    
+                '',
+                '',
+                '(Red 기준 : CPU 10% 이하, 메모리 1G이하, free Disk 10% 이하)',
+                '(Red 기준 : CPU 10% 이하, 메모리 500M이하, free Disk 10% 이하)',
+                '',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '',
+            ],
+            "sentence_h3": [
+                'http://10.11.67.29:3000/d/MYEQGw5Vk/rutms-a10-resource-monitor?orgId=1',
+                'http://10.11.67.29:3000/d/HK5wzuFVkasdf/rutms-fw_resource-monitor?orgId=1',
+                'http://10.11.67.29:3000/d/-FwPmOcVz/ru-prd-ccs-neteuweokeu-jonghab-moniteoring?orgId=1&refresh=1h',
+                'http://10.11.67.29:3000/d/rDJA39K4z/ru-bm-and-netapp-resource?orgId=1',
+                'http://10.11.67.29:3000/d/HEd3C9FVk/ru-vm-resource?orgId=1',
+                'http://10.11.67.29:3000/d/3MMHzXKVz/ru-prd-db-resource-usage-top-20?orgId=1',
+                'https://10.7.0.231/clusters/70559/explorer',
+                'http://10.11.67.29:3000/d/Rv-oDy54k/ru-netapp-dash-board?orgId=1',
+            ]
+        },
+        "NA": {
+            "sentence_h1": [
+                '',
+                '',
+                '',
+                'BM(Bare Metal): CCS NA 내 모든 물리서버 대상 Worst Top 10 정보. Red가 아니면 모두 정상',
+                'VM: CCS NA 내 모든 가상서버 대상 Worst Top 10  정보.',
+                'NA DB : NA PRD DB 정보 (CPU, Memory, session)',
+                '',
+                '',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ],
+            "sentence_h2": [
+                '',
+                '',
+                '',
+                '(Red 기준 : CPU 10% 이하, 메모리 1G이하, free Disk 10% 이하)',
+                '(Red 기준 : CPU 10% 이하, 메모리 500M이하, free Disk 10% 이하)',
+                '',
+                '',
+                '',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ],
+            "sentence_h3": [
+                 'http://10.11.67.29:3000/d/EHCxmuK4k/natms-a10-resource-monitor?orgId=1',
+                'http://10.11.67.29:3000/d/HK5wzuFVk22/natms-fw_resource-monitor?orgId=1&refresh=5m',
+                'http://10.11.67.29:3000/d/--HdWuF4k/na-prd-ccs-neteuweokeu-jonghab-moniteoring?orgId=1',
+                'http://10.11.67.29:3000/d/67-wNjK4k/na-bm-and-netapp-resource?orgId=1',
+                'http://10.11.67.29:3000/d/0azeCrF4k/na-vm-resource?orgId=1',
+                'http://10.11.67.29:3000/d/7DOFRuKVz/na-prd-db-resource-usage-top-20?orgId=1',
+                'http://10.11.67.29:3000/d/1Igbn754k/na_mongodb?orgId=1',
+                'http://10.11.67.29:3000/d/LjsjmuF4z/na-prd-netapp-dash-board?orgId=1',
+                'https://10.7.0.231/clusters/6035/explorer',
+                'https://10.7.0.231/clusters/82788/explorer',
+                'http://10.11.67.29:3000/d/DJdDeD5Vz/coc-k8s-summary-dashboard-alert-system-na-1?orgId=1',
+                'http://10.11.67.29:3000/d/FnMc6vc4k/coc-k8s-summary-dashboard-alert-system-na-2?orgId=1',
+                'http://10.11.67.29:3000/d/iBqceD5Vk/coc-k8s-summary-dashboard-alert-system-na-3?orgId=1',
+                'http://10.11.67.29:3000/d/lxRheD5Vz/coc-k8s-summary-dashboard-alert-system-na-4?orgId=1',
+                'http://10.11.67.29:3000/d/OYNJ6v5Vz/coc-k8s-summary-dashboard-alert-system-na-5?orgId=1',
+            ]
+        },
+        "SG": {
+            "sentence_h1": [
+                '',
+                '',
+                '',
+                'BM(Bare Metal): CCS SG 내 모든 물리서버 대상 Worst Top 10 정보. Red가 아니면 모두 정상',
+                'VM: CCS SG 내 모든 가상서버 대상 Worst Top 10  정보.',
+                'SG DB : SG PRD DB 정보 (CPU, Memory, session)',
+                '',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ],
+            "sentence_h2": [
+                '',
+                '',
+                '',
+                '(Red 기준 : CPU 10% 이하, 메모리 3G이하, free Disk 10% 이하)',
+                '(Red 기준 : CPU 10% 이하, 메모리 370M이하, free Disk 10% 이하)',
+                '',
+                '',
+                '',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ],
+            "sentence_h3": [
+                'http://10.11.67.29:3000/d/sjElzXFVk/sg_f5_monitor?orgId=1',
+                'http://10.11.67.29:3000/d/0kQdZuFVk/sg-fw-monitor?orgId=1',
+                'http://10.11.67.29:3000/d/qstVWXF4z/sg-prd-ccs-neteuweokeu-jonghab-moniteoring?orgId=1',
+                'http://10.11.67.29:3000/d/dPViDjKVk/sg-bm-and-netapp-resource?orgId=1',
+                'http://10.11.67.29:3000/d/5bY3CrK4z/sg-vm-resource?orgId=1',
+                'http://10.11.67.29:3000/d/RJrKguFVz/sg-prd-db-resource-usage-top-20?orgId=1',
+                'http://10.11.67.29:3000/d/sWpQ77c4k/sg_mongodb?orgId=1',
+                'http://10.11.67.29:3000/d/Bh1NWuF4k/sg-netapp-dash-board?orgId=1',
+                'https://10.107.48.110/sysmgr/v4/',
+                'https://10.107.48.130/sysmgr/v4/',
+                'http://10.11.67.29:3000/d/s-HlRO5Vk/coc-k8s-summary-dashboard-alert-system-1',
+                'http://10.11.67.29:3000/d/6bgugO5Vk/coc-k8s-summary-dashboard-alert-system-2?orgId=1',
+                'http://10.11.67.29:3000/d/26t9gdcVz/coc-k8s-summary-dashboard-alert-system-3?orgId=1',
+                'http://10.11.67.29:3000/d/1R13gO54k/coc-k8s-summary-dashboard-alert-system-4?orgId=1',
+                'http://10.11.67.29:3000/d/bxw6gOc4z/coc-k8s-summary-dashboard-alert-system-5?orgId=1',
+            ]
+        },
+         "CN": {
+            "sentence_h1": [
+                '',
+                '',
+                '',
+                'BM(Bare Metal): CCS CN 내 모든 물리서버 대상 Worst Top 10 정보. Red가 아니면 모두 정상',
+                'VM: CCS CN 내 모든 가상서버 대상 Worst Top 10  정보.',
+                'CN DB : CN PRD DB 정보 (CPU, Memory, session)',
+                '',
+                'Storage: 운영계 스토리지 클러스터 의 IOPS, Throughput 정보',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ],
+            "sentence_h2": [
+                '',
+                '',
+                '',
+                '(Red 기준 : CPU 10% 이하, 메모리 500M이하, free Disk 10% 이하)',
+                '(Red 기준 : CPU 10% 이하, 메모리 300M이하, free Disk 10% 이하)',
+                '',
+                '',
+                '비교 수치 일평균 peak iops / peak throughput (Mbps)',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+            ],
+            "sentence_h3": [
+                'http://10.11.67.29:3000/d/CNA10PRDMON/cntms-a10-resource-monitor-2?orgId=1&from=now-24h&to=now',
+                'http://10.11.67.29:3000/d/HK5wzuFVk/cntms-fw_resource-monitor?orgId=1',             
+                'http://10.11.67.29:3000/d/KEzWdkx4k/cn-prd-ccs-neteuweokeu-jonghab-moniteoring_cn_local_bm?orgId=1',
+                'http://10.11.67.29:3000/d/y8fH39F4z/cn-bm-and-netapp-resource_cn_bm?orgId=1',
+                'http://10.11.67.29:3000/d/0wC_C9KVk/cn-vm-resource?orgId=1',
+                'http://10.11.67.29:3000/d/cuCvRXFVz/cn-prd-db-resource-usage-top-20?orgId=1',
+                'http://10.11.67.29:3000/d/UV_0nn54z/cn_mongodb?orgId=1',
+                'http://10.11.67.29:3000/d/gCFdtpc4k/cn-netapp-dash-board?orgId=1',
+                'https://10.7.0.231/clusters/124202/explorer',
+                'http://10.11.67.29:3000/d/6-ohBrAVk/coc-k8s-summary-dashboard-alert-system-hpg?orgId=1',
+                'http://10.11.67.29:3000/d/tPHGkO54z/coc-k8s-summary-dashboard-alert-system-2?orgId=1',
+                'http://10.11.67.29:3000/d/0SInzdcVk/coc-k8s-summary-dashboard-alert-system-3?orgId=1',
+                'http://10.11.67.29:3000/d/gTW4kOcVz/coc-k8s-summary-dashboard-alert-system-4?orgId=1',
+                'http://10.11.67.29:3000/d/HUDSkd54k/coc-k8s-summary-dashboard-alert-system-5?orgId=1',
+                'http://10.11.67.29:3000/d/qSoHkdcVz/coc-k8s-summary-dashboard-alert-system-6?orgId=1',
+                'http://10.11.67.29:3000/d/cYaDzOcVk/coc-k8s-summary-dashboard-alert-system-7?orgId=1',
+                'http://10.11.67.29:3000/d/pJ-dkO5Vz/coc-k8s-summary-dashboard-alert-system-8?orgId=1',
+                'http://10.11.67.29:3000/d/vRN5zOcVk/coc-k8s-summary-dashboard-alert-system-9?orgId=1',
+            ] 
+         }
     }
     
     # 언어에 따른 문장 선택
@@ -247,11 +480,100 @@ def createpdf(region):
         
     elif region == 'EU':
         common_filenames = [
-        '%s1_BORDER_NETWORK_*.png',
-        '%s2_BORDER_NETWORK_*.png',
-     ]
+        'LB(A10)_%s_1center_PRD_*.png',
+        'FW_%s_1center_PRD_*.png',
+        '%s_1center_PRD_*.png',
+        'HOST_%s_1center_PRD_*.png',
+        'VM_%s_1center_PRD_*.png',
+        'DB_%s_1center_PRD_*.png',
+        'mongo_%s_1center_PRD_*.png',
+        'NETAPP_INFO_%s_1center_PRD_*.png',
+        'NPS1_%s_1center_PRD_*.png',
+        'ccs_k8s_%s_1_1center_PRD_*.png',
+        'ccs_k8s_%s_2_1center_PRD_*.png',
+        'ccs_k8s_%s_3_1center_PRD_*.png',
+        'ccs_k8s_%s_4_1center_PRD_*.png',
+    ]
+  
+    elif region == 'SG':
+        common_filenames = [
+        'LB(F5)_%s_1center_PRD_*.png',
+        'FW_%s_1center_PRD_*.png',
+        '%s_1center_PRD_*.png',
+        'HOST_%s_1center_PRD_*.png',
+        'VM_%s_1center_PRD_*.png',
+        'DB_%s_1center_PRD_*.png',
+        'mongo_%s_1center_PRD_*.png',
+        'NETAPP_INFO_%s_1center_PRD_*.png',
+        'NPS1_%s_1center_PRD_*.png',
+        'NPS2_%s_1center_PRD_*.png',
+        'ccs_k8s_%s_1_1center_PRD_*.png',
+        'ccs_k8s_%s_2_1center_PRD_*.png',
+        'ccs_k8s_%s_3_1center_PRD_*.png',
+        'ccs_k8s_%s_4_1center_PRD_*.png',
+        'ccs_k8s_%s_5_1center_PRD_*.png',
+        'IaaS_SLA_%s_1center_*.png',
+        'IaaS_Resource_%s_1center_*.png',
+        'IaaS_Summary_%s_1center_*.png'
+    ]
+    
+    elif region == 'CN':
+        common_filenames = [
+        'LB(A10)_%s_1center_PRD_*.png',
+        'FW_%s_1center_PRD_*.png',
+        '%s_1center_PRD_*.png',
+        'HOST_%s_1center_PRD_*.png',
+        'VM_%s_1center_PRD_*.png',
+        'DB_%s_1center_PRD_*.png',
+        'mongo_%s_1center_PRD_*.png',
+        'NETAPP_INFO_%s_1center_PRD_*.png',
+        'NPS1_%s_1center_PRD_*.png',
+        '%s_DKC_HPG_Cluster_PRD_*.png',
+        '%s_DKC_HPL_Cluster_PRD_*.png',
+        '%s_DKC_KPG_Cluster_PRD_*.png',
+        '%s_DKC_KPL_Cluster_PRD_*.png',
+        '%s_DKC_GPQ_Cluster_PRD_*.png',
+        '%s_DKC_GPL_Cluster_PRD_*.png',
+        '%s_SVCHUB_Core_Cluster_PRD_*.png',
+        '%s_SVCHUB_DMZ_Cluster_PRD_*.png',
+        '%s_Vtwin_Cluster_PRD_*.png'
+]
+    
+    elif region == 'NA':
+        common_filenames = [
+        'LB(A10)_%s_1center_PRD_*.png',
+        'FW_%s_1center_PRD_*.png',
+        '%s_1center_PRD_*.png',
+        'HOST_%s_1center_PRD_*.png',
+        'VM_%s_1center_PRD_*.png',
+        'DB_%s_1center_PRD_*.png',
+        'mongo_%s_1center_PRD_*.png',
+        'NETAPP_INFO_%s_1center_PRD_*.png',
+        'NPS1_%s_1center_PRD_*.png',
+        'NPS2_%s_1center_PRD_*.png',
+        'ccs_k8s_%s_1_1center_PRD_*.png',
+        'ccs_k8s_%s_2_1center_PRD_*.png',
+        'ccs_k8s_%s_3_1center_PRD_*.png',
+        'ccs_k8s_%s_4_1center_PRD_*.png',
+        'ccs_k8s_%s_5_1center_PRD_*.png'
+]
 
-    # 파일 검색
+    elif region == 'RU':
+        common_filenames = [
+        'LB(A10)_%s_1center_PRD_*.png',
+        'FW_%s_1center_PRD_*.png',
+        '%s_1center_PRD_*.png',
+        'HOST_%s_1center_PRD_*.png',
+        'VM_%s_1center_PRD_*.png',
+        'DB_%s_1center_PRD_*.png',
+        'NPS1_%s_1center_PRD_*.png',
+        'NETAPP_INFO_%s_1center_PRD_*.png'
+]
+
+
+
+
+    
             
     try:
         filelist_delete = []
@@ -260,29 +582,28 @@ def createpdf(region):
             filenames = glob.glob(os.path.join('ScreenShots', filename_pattern % region))
             
             if not filenames:  # 파일을 찾지 못한 경우
-                print("No image files found for pattern:", filename_pattern )
+                print("No image files found for pattern:", filename_pattern % region)
                 return  # 함수 종료
             else:
                 filelist_delete.append(filenames[-3])
         
+        print(filelist_delete)
+
         for filelist in filelist_delete:
             if not filelist:
                 continue
-            for file in filelist:
-                
-                try:
-                    print("Deleting file:", file)
-                    os.remove(file)
-                    print("File deleted!!!")
+            try:
+                print("Deleting file:", file)
+                os.remove(file)
+                print("File deleted!!!")
     
-                except Exception as e:
-                    print("Error deleting file:", file)
-                    print(e)
-
+            except Exception as e:
+                print("Error deleting file:", file)
+                print(e)
             
     except Exception as e:
                     print(e)
-                    print('삭제함수에러')
+                    print('삭제할파일이 없습니다.')
 
     filelist_recently = []
 
@@ -327,24 +648,9 @@ def createpdf(region):
                         # Use PyPDF to merge the image-PDF into the template
                         pdf.addPage(PdfFileReader(BytesIO(imgTemp.getvalue())).getPage(0))
                     
-    print("pdf create")
+    
     filename = 'Infra_in_detail' + datetime.now().strftime('%Y%m%d_%H%M') + '.pdf'
     filename = os.path.join(pdf_path, filename)
     pdf.write(open(filename,"wb"))
 
-        
-
-    
-    print("리포트저장에러")
-
-
-
-
-# if __name__ == '__main__':
-
-#     # fonts = [(f.name, f.fname) for f in fm.fontManager.ttflist if 'Nanum' in f.name]
-#     # print(fonts)
-    
-#     filename = 'Infra_in_detail_' + datetime.now().strftime('%Y%m%d-%H%M') + '.pdf'
-
-#     gen_pdf(filename)
+    print("--리포트저장성공--")
