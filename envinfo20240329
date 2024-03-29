@@ -1,0 +1,11 @@
+(venv) C:\work\rpa>pip --version 
+pip 22.0.4 from C:\work\rpa\venv\lib\site-packages\pip (python 3.10)
+
+Python 3.10.5
+
+
+
+
+pip freeze > requirements.txt
+위 이후 
+pip install -r requirements.txt
