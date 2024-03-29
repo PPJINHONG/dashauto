@@ -16,6 +16,11 @@ mpl.rcParams['axes.unicode_minus']=False
 import os
 import glob
 
+
+
+#"박진홍" 9458131@ict-companion.com
+#"클라우드운영센터" coc_in_ko@hyundai-autoever.com
+
 Sentences1 = [
     '',
     '',
