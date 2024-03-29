@@ -512,9 +512,6 @@ def createpdf(region):
         'ccs_k8s_%s_3_1center_PRD_*.png',
         'ccs_k8s_%s_4_1center_PRD_*.png',
         'ccs_k8s_%s_5_1center_PRD_*.png',
-        'IaaS_SLA_%s_1center_*.png',
-        'IaaS_Resource_%s_1center_*.png',
-        'IaaS_Summary_%s_1center_*.png'
     ]
     
     elif region == 'CN':
@@ -593,12 +590,12 @@ def createpdf(region):
             if not filelist:
                 continue
             try:
-                print("Deleting file:", file)
-                os.remove(file)
+                print("Deleting file:", filelist)
+                os.remove(filelist)
                 print("File deleted!!!")
     
             except Exception as e:
-                print("Error deleting file:", file)
+                print("Error deleting file:", filelist)
                 print(e)
             
     except Exception as e:
@@ -608,10 +605,10 @@ def createpdf(region):
     filelist_recently = []
 
     for filename_pattern in common_filenames:
-            filenames = glob.glob(os.path.join('ScreenShots', filename_pattern))
+            filenames = glob.glob(os.path.join('ScreenShots', filename_pattern % region))
             
             if not filenames:  # 파일을 찾지 못한 경우
-                print("No image files found for pattern:", filename_pattern)
+                print("No image files found for pattern:", filename_pattern % region)
                 return  # 함수 종료
             else:
                 filelist_recently.append(filenames[-1])
