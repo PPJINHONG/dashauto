@@ -38,52 +38,6 @@ class Driver:
 thread_local = threading.local()
 
 # 웹페이지 로그인 제공
-def login2(driver, url, userid, userid_xpath, passwd, passwd_xpath, login_xpath):
-    # Grafana 로그인 페이지로 이동
-    driver.get(url)
-    sleep(30)
-    driver.switch_to.default_content()
-    driver.switch_to.parent_frame()
-
-    try:
-        driver.implicitly_wait(3)        
-        # 고급 버튼 클릭
-        driver.find_element('xpath', '//*[@id="details-button"]').click()
-        sleep(5)
-
-        # 이동 버튼 클릭
-        driver.find_element('xpath', '//*[@id="proceed-link"]').click()
-        sleep(10)
-
-        #Hcloud 추가
-        driver.find_element('xpath', '//*[@id="reactRoot"]/div/main/div[3]/div/div[2]/div/div[2]/div[2]/a').click() 
-        sleep(5)
-
-    except Exception as e:
-        print(e)
-
-    finally:
-        print("Step 1, login")
-        driver.implicitly_wait(3)           
-        # UserID 입력
-        username = driver.find_element('xpath', userid_xpath)                                            
-        username.clear()
-        username.send_keys(userid)
-        sleep(3)
-
-        print("Step 2, login")
-        # Password 입력
-        password = driver.find_element('xpath', passwd_xpath)
-        password.clear()
-        password.send_keys(passwd)
-        sleep(3)
-
-        print("Step 3, login")
-        # Login 버튼 클릭
-        driver.find_element('xpath', login_xpath).click()
-
-        sleep(3)
-
 def login(driver, url, userid, userid_xpath, passwd, passwd_xpath, login_xpath):
     try:
         # Grafana 로그인 페이지로 이동
@@ -133,8 +87,8 @@ def login(driver, url, userid, userid_xpath, passwd, passwd_xpath, login_xpath):
 
     except Exception as e:
         print(f"Error occurred during login: {e}")
-        # 에러 메시지 출력 후 종료
-        sys.exit(1)
+        
+        
 
 
 # 로그인 정보 딕셔너리
@@ -199,53 +153,6 @@ def create_driver(bot):
     return driver
 
 
-
-def take_screenshot1(bot):
-    print("--take_screenshot--")
-    # 웹드라이버 생성
-    try:
-        driver = create_driver(bot)
-        if driver is None:
-            return  # 드라이버 생성 실패 시 함수 종료
-
-        print(f"Capturing the screens started at {datetime.now()}")
-        
-        start_time = time.time()
-        
-        if bot == "k8s_cluster_1center_ccskr-rancher-prd":
-            url = 'https://hubble-apne2-prd.platform.hcloud.io/grafana/d/coBoVkG4z/kr-apne1-rancher-local?orgId=27'
-            filename = f'{screenshots_path}/KR1_Rancher-prd_{datetime.now().strftime("%Y%m%d_%H%M")}.png'
-        elif bot == "k8s_cluster_1center_ccskr-devworks-prd":
-            url = 'http://10.11.67.29:3000/d/1HihRd54k/coc-k8s-summary-dashboard-alert-system-kr1-kr_devworks_prd_cluster?orgId=1'
-            filename = f'{screenshots_path}/KR1_ccskr-devworks-prd_{datetime.now().strftime("%Y%m%d_%H%M")}.png'
-        elif bot == "k8s_cluster_1center_ccskr-dkc2hpkr-prd":
-            url = 'http://10.11.67.29:3000/d/oOYkgdc4z/coc-k8s-summary-dashboard-alert-system-kr1-dkc2-hpkr?orgId=1'
-            filename = f'{screenshots_path}/KR1_ccskr-dkc2hpkr-prd_{datetime.now().strftime("%Y%m%d_%H%M")}.png'
-        try:
-            driver.get(url)                 
-            sleep(180)                 
-            driver.set_window_size(1920, 1080)
-            sleep(10)
-            driver.maximize_window()
-            sleep(10)
-            driver.execute_script("document.body.style.zoom=0.80")
-            sleep(2)
-        except Exception as e:
-            print(e)
-        # 화면 캡처 수행
-        
-        try:
-            driver.save_screenshot(filename)
-        except KeyboardInterrupt:
-            print('Caught keyboardinterrupt')
-            pass                
-                    
-        print("Step 4, take_screenshot")
-    # 예외 처리
-    except (KeyboardInterrupt, SystemExit):
-        print("\nkeyboardinterrupt caught")
-        print("\n... Program Stopped Manually!")
-        exiting.set()
 
 def take_screenshot(bot):
     print("--take_screenshot--")
